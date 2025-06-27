@@ -1,0 +1,25 @@
+import math
+
+def delta(a, b, c):
+    return(b**2 - 4*a*c)
+def bhaskara(a, b, c):
+    d = delta(a, b, c)
+    if d < 0:
+        print('A equação não possui raízes reais')
+    elif d == 0:
+        print('A equação possui raíz dupla dada por:', (-b + math.sqrt(d))/2)
+    else: 
+        print('A equação possui duas raízes reais dadas por:')
+        print()
+        print('x1 =', (-b - math.sqrt(d)), 'e x2 =', (-b + math.sqrt(d)))
+def main():
+    a = -1
+    while a < 0:
+        try:
+            a = float(input('Insira o coeficiente quadrático: '))
+            b = float(input('Insira o coeficiente angular: '))
+            c = float(input('Insira o termo independente: '))
+        except: 
+            print('Por favor, insira somente números.')
+    bhaskara(a, b, c)
+main()
