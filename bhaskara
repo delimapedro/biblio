@@ -2,6 +2,8 @@ import math
 
 def delta(a, b, c):
     return(b**2 - 4*a*c)
+
+
 def bhaskara(a, b, c):
     d = delta(a, b, c)
     if d < 0:
@@ -12,6 +14,8 @@ def bhaskara(a, b, c):
         print('A equação possui duas raízes reais dadas por:')
         print()
         print('x1 =', (-b - math.sqrt(d)), 'e x2 =', (-b + math.sqrt(d)))
+
+
 def main():
     a = -1
     while a < 0:
